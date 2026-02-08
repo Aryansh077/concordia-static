@@ -7,122 +7,118 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fixed Logo -->
-    <div class="fixed-logo">
-        <img src="./BACKGROUND IMAGE CONCORDIA.png" alt="Concordia Logo">
-    </div>
-
     <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
+                <img src="./CONCORDIA LOGO FOR THE FRON.png" alt="Concordia Logo" class="navbar-logo">
                 <h1>CONCORDIA</h1>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="sponsors.html" class="active">Sponsors</a></li>
-                <li><a href="team.html">Team</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html" class="active">Sponsors</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <h1>Our Sponsors</h1>
-        <p>We are proud to be supported by leading organizations</p>
-    </section>
-
-    <!-- Platinum Sponsors -->
-    <section class="sponsors-section">
+    <!-- Sponsorship Info Section -->
+    <section class="sponsorship-section">
         <div class="container">
-            <h2>Platinum Sponsors</h2>
-            <div class="sponsorship-details">
-                <div class="price-box">
-                    <h3>Platinum Package</h3>
-                    <p class="price">₹25,000</p>
-                    <p class="package-description">What We Provide:</p>
-                    <ul class="benefits-list">
-                        <li>✓ Prime Logo Placement</li>
-                        <li>✓ Keynote Opportunity</li>
-                        <li>✓ Exclusive Promotions</li>
+            <h2 class="section-title">Why Sponsor Concordia Events?</h2>
+            <div class="sponsorship-content">
+                <!-- Left Side: Benefits -->
+                <div class="sponsorship-info">
+                    <h3>Partnership Opportunities</h3>
+                    <ul class="sponsor-benefits">
+                        <li>✓ Increase brand visibility to 1000+ students</li>
+                       
+                        <li>✓ Showcase your products and services</li>
+                        <li>✓ Build lasting partnerships and relationships</li>
+                        <li>✓ Corporate social responsibility opportunities</li>
+                        <li>✓ Premium branding and media exposure</li>
                     </ul>
+                    <button class="btn btn-large btn-sponsor" onclick="contactSponsorship()">Get Involved Today</button>
                 </div>
-            </div>
-            <div class="sponsors-grid">
-                <div class="sponsor-card platinum">
-                    <img src="https://via.placeholder.com/250x150?text=TechCorp+Inc" alt="TechCorp Inc">
-                    <h3>TechCorp Inc</h3>
-                    <p>Leading innovator in digital transformation and cloud solutions</p>
-                </div>
-                <div class="sponsor-card platinum">
-                    <img src="https://via.placeholder.com/250x150?text=Global+Finance" alt="Global Finance">
-                    <h3>Global Finance Group</h3>
-                    <p>Premier financial services and investment management</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Gold Sponsors -->
-    <section class="sponsors-section">
-        <div class="container">
-            <h2>Gold Sponsors</h2>
-            <div class="sponsorship-details">
-                <div class="price-box">
-                    <h3>Gold Package</h3>
-                    <p class="price">₹15,000</p>
-                    <p class="package-description">What We Provide:</p>
-                    <ul class="benefits-list">
-                        <li>✓ Logos on Banner</li>
-                        <li>✓ Digital Promotion</li>
-                        <li>✓ Event Acknowledgement</li>
-                    </ul>
+                <!-- Middle: Sponsorship Tiers -->
+                <div class="sponsorship-tiers">
+                    <h3>Sponsorship Tiers Overview</h3>
+                    <div class="tier-tabs">
+                        <button class="tier-tab-btn active" onclick="showTierDetails('platinum')">
+                            <span class="tier-name">Platinum</span>
+                        </button>
+                        <button class="tier-tab-btn" onclick="showTierDetails('gold')">
+                            <span class="tier-name">Gold</span>
+                        </button>
+                        <button class="tier-tab-btn" onclick="showTierDetails('silver')">
+                            <span class="tier-name">Silver</span>
+                        </button>
+                    </div>
+                    <div class="tier-details">
+                        <div id="platinum" class="tier-detail-content active">
+                            <h4>Platinum</h4>
+                            <p class="tier-price">₹25,000</p>
+                            <ul>
+                                <li>Prime Logo Placement</li>
+                                <li>Keynote Opportunity</li>
+                                <li>Exclusive Promotions</li>
+                            </ul>
+                        </div>
+                        <div id="gold" class="tier-detail-content">
+                            <h4>Gold</h4>
+                            <p class="tier-price">₹15,000</p>
+                            <ul>
+                                <li>Logos on Banner</li>
+                                <li>Digital Promotion</li>
+                                <li>Event Acknowledgement</li>
+                            </ul>
+                        </div>
+                        <div id="silver" class="tier-detail-content">
+                            <h4>Silver</h4>
+                            <p class="tier-price">₹10,000</p>
+                            <ul>
+                                <li>Logo on Poster</li>
+                                <li>Certificates</li>
+                                <li>Social Media Mentions</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sponsors-grid">
-                <div class="sponsor-card gold">
-                    <img src="https://via.placeholder.com/200x120?text=Innovation+Labs" alt="Innovation Labs">
-                    <h3>Innovation Labs</h3>
-                    <p>Research & Development Excellence</p>
-                </div>
-                <div class="sponsor-card gold">
-                    <img src="https://via.placeholder.com/200x120?text=NextGen+Solutions" alt="NextGen">
-                    <h3>NextGen Solutions</h3>
-                    <p>Business Consulting & Strategy</p>
-                </div>
-                <div class="sponsor-card gold">
-                    <img src="https://via.placeholder.com/200x120?text=Premier+Hotels" alt="Hotels">
-                    <h3>Premier Hotels & Resorts</h3>
-                    <p>Hospitality & Event Management</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Silver Sponsors -->
-    <section class="sponsors-section">
-        <div class="container">
-            <h2>Silver Sponsors</h2>
-            <div class="sponsorship-details">
-                <div class="price-box">
-                    <h3>Silver Package</h3>
-                    <p class="price">₹10,000</p>
-                    <p class="package-description">What We Provide:</p>
-                    <ul class="benefits-list">
-                        <li>✓ Logo on Poster</li>
-                        <li>✓ Certificates</li>
-                        <li>✓ Social Media Mentions</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="sponsors-grid">
-                <div class="sponsor-card silver">
-                    <img src="https://via.placeholder.com/180x110?text=Smart+Media" alt="Smart Media">
-                    <h3>Smart Media</h3>
+                <!-- Right Side: Our Sponsors Showcase -->
+                <div class="sponsors-showcase">
+                    <h3>Our Valued Sponsors</h3>
+                    <div class="sponsors-box">
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=TechCorp+Inc" alt="TechCorp Inc">
+                            <p>TechCorp Inc</p>
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=Global+Finance" alt="Global Finance">
+                            <p>Global Finance Group</p>
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=Innovation+Labs" alt="Innovation Labs">
+                            <p>Innovation Labs</p>
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=NextGen+Solutions" alt="NextGen">
+                            <p>NextGen Solutions</p>
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=Premier+Hotels" alt="Hotels">
+                            <p>Premier Hotels & Resorts</p>
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="https://via.placeholder.com/150x80?text=Smart+Media" alt="Smart Media">
+                            <p>Smart Media</p>
+                        </div>
+                    </div>
+                    <p class="sponsors-subtitle">Join our growing network of partners and sponsors</p>
                 </div>
             </div>
         </div>
@@ -187,5 +183,29 @@
             <p>Follow us on social media for updates and announcements</p>
         </div>
     </footer>
+
+    <script>
+        function contactSponsorship() {
+            alert('For sponsorship inquiries, please contact us at: sponsor@concordia.com\n\nWe would love to partner with your organization!');
+        }
+
+        function showTierDetails(tier) {
+            // Hide all tier details
+            const allDetails = document.querySelectorAll('.tier-detail-content');
+            allDetails.forEach(detail => detail.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const allButtons = document.querySelectorAll('.tier-tab-btn');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tier
+            document.getElementById(tier).classList.add('active');
+            
+            // Set active button
+            event.target.closest('.tier-tab-btn').classList.add('active');
+        }
+    </script>
 </body>
 </html>
+
+  

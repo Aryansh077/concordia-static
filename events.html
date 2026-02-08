@@ -7,24 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fixed Logo -->
-    <div class="fixed-logo">
-        <img src="./BACKGROUND IMAGE CONCORDIA.png" alt="Concordia Logo">
-    </div>
-
     <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
+                <img src="./CONCORDIA LOGO FOR THE FRON.png" alt="Concordia Logo" class="navbar-logo">
                 <h1>CONCORDIA</h1>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html" class="active">Events</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="team.html">Team</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -33,107 +28,116 @@
     <!-- Page Header -->
     <section class="page-header">
         <h1>Our Events</h1>
-        <p>Featured Event & More Coming Up</p>
+        <p>Featured Event & More</p>
     </section>
 
-    <!-- Featured Event & Side Events Section -->
+    <!-- Featured Event Section - Full Width Banner -->
     <section class="featured-event-section">
         <div class="container">
-            <div class="events-layout">
-                <!-- Featured Event (Left) -->
-                <div class="featured-event-card">
-                    <div class="featured-event-image">
-                        <img src="./LUMINA FEATURED EVENT.png" alt="Featured Event">
-                        <div class="featured-badge">Featured Event</div>
+            <div class="featured-event-banner" onclick="openEventDetail(-1)">
+                <div class="featured-banner-image">
+                    <img src="./LUMINA FEATURED EVENT.png" alt="Featured Event">
+                    <div class="featured-badge">Featured Event</div>
+                </div>
+                <div class="featured-banner-content">
+                    <div class="featured-icon">🎭</div>
+                    <h2>LUMINAH MUN XXV</h2>
+                    <div class="featured-details">
+                        <div class="detail-row" onclick="event.stopPropagation()">
+                            <span class="detail-icon">📅</span>
+                            <span><strong>Date:</strong> December 18,19 2025</span>
+                        </div>
+                        <div class="detail-row" onclick="event.stopPropagation()">
+                            <span class="detail-icon">🕐</span>
+                            <span><strong>Time:</strong> 10:00 AM- 06:00PM</span>
+                        </div>
+                        <div class="detail-row" onclick="event.stopPropagation()">
+                            <span class="detail-icon">📍</span>
+                            <span><strong>Location:</strong> D.Y PATIL INTERNATIONAL UNIVERSITY</span>
+                        </div>
+                        <div class="detail-row" onclick="event.stopPropagation()">
+                            <span class="detail-icon">👥</span>
+                            <span><strong>Expected Attendees:</strong> 300+</span>
+                        </div>
                     </div>
-                    <div class="featured-event-content">
-                        <div class="featured-icon">🎭</div>
-                        <h2>LUMINAH MUN XXV</h2>
-                        <div class="featured-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📅</span>
-                                <span><strong>Date:</strong> December 18,19 2025</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🕐</span>
-                                <span><strong>Time:</strong> 10:00 AM- 06:00PM</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">📍</span>
-                                <span><strong>Location:</strong> D.Y PATIL INTERNATIONAL UNIVERSITY</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">👥</span>
-                                <span><strong>Expected Attendees:</strong> 300+</span>
-                            </div>
-                        </div>
-                        <p class="featured-description">
-                            Join us for our most prestigious event of the year! The Annual Gala 2025 features live entertainment, fine dining, and exclusive networking opportunities. Dress code: Black Tie.
-                        </p>
-                        <div class="featured-highlights">
-                            <h3>What to Expect:</h3>
-                            <ul>
-                                <li>✓ Live Jazz Performance</li>
-                                <li>✓ Gourmet Dinner Service</li>
-                                <li>✓ Award Ceremony</li>
-                                <li>✓ Dancing & Entertainment</li>
-                                <li>✓ Exclusive Networking</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-large">Register for Gala</button>
+                    <p class="featured-description">
+                       The Luminah Model United Nations (LuminahMUN XXV) event aimed to position DYPIU as a hub for academic diplomacy and leadership, where young thinkers and negotiators engage in meaningful, respectful discourse. The event seeks to build leadership skills, boost the university’s academic visibility, align with global engagement standards, and establish a lasting annual tradition under the Concordia Club. 
+
+.
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Events Section - Half Screen -->
+    <section class="more-events-section">
+        <div class="container">
+            <h2 class="section-title">More Events</h2>
+            <div class="more-events-grid">
+                <!-- Event 1 -->
+                <div class="event-card-large" onclick="openEventDetail(0)">
+                    <img src="./cosplay.jpeg" alt="Tech Innovation Summit" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>COSMOFEST</h3>
+                        <p class="event-date">October 20, 2025</p>
+                        <p class="event-location">Convention Center</p>
                     </div>
                 </div>
 
-                <!-- Other Events Sidebar (Right) -->
-                <div class="events-sidebar">
-                    <!-- First Event - Big -->
-                    <div class="featured-small-card">
-                        <div class="small-card-icon">💻</div>
-                        <h3>Tech Summit</h3>
-                        <p class="small-card-date">March 20, 2025</p>
-                        <button class="btn btn-small" onclick="openEventDetail(0)">View Details</button>
-                    </div>
-
-                    <!-- Other 6 Events - Small -->
-                    <h3 class="other-events-title">More Events</h3>
-                    <div class="small-events-grid">
-                        <!-- Event 2 -->
-                        <div class="event-circle-small" onclick="openEventDetail(1)">
-                            <div class="circle-icon">🏃</div>
-                            <div class="circle-text">Team Building</div>
-                        </div>
-
-                        <!-- Event 3 -->
-                        <div class="event-circle-small" onclick="openEventDetail(2)">
-                            <div class="circle-icon">🏆</div>
-                            <div class="circle-text">Awards</div>
-                        </div>
-
-                        <!-- Event 4 -->
-                        <div class="event-circle-small" onclick="openEventDetail(3)">
-                            <div class="circle-icon">📚</div>
-                            <div class="circle-text">Workshop</div>
-                        </div>
-
-                        <!-- Event 5 -->
-                        <div class="event-circle-small" onclick="openEventDetail(4)">
-                            <div class="circle-icon">❤️</div>
-                            <div class="circle-text">Charity</div>
-                        </div>
-
-                        <!-- Event 6 -->
-                        <div class="event-circle-small" onclick="openEventDetail(5)">
-                            <div class="circle-icon">🎤</div>
-                            <div class="circle-text">Speaker</div>
-                        </div>
-
-                        <!-- Event 7 -->
-                        <div class="event-circle-small" onclick="openEventDetail(6)">
-                            <div class="circle-icon">🌍</div>
-                            <div class="circle-text">Global</div>
-                        </div>
+                <!-- Event 2 -->
+                <div class="event-card-large" onclick="openEventDetail(1)">
+                    <img src="./mock mun.jpeg" alt="Team Building" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>MOCK MUN</h3>
+                        <p class="event-date">August 10, 2025</p>
+                        <p class="event-location">D.Y PATIL INTERNATIONAL UNIVERSITY</p>
                     </div>
                 </div>
+
+                <!-- Event 3 -->
+                <div class="event-card-large" onclick="openEventDetail(2)">
+                    <img src="./CULTUTRAL ART SESSION.jpg" alt="Awards" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>INTERNATIONAL CULTURAL ART</h3>
+                        <p class="event-date">June 22, 2025</p>
+                        <p class="event-location">D.Y PATIL INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card-large" onclick="openEventDetail(3)">
+                    <img src="./study abroad fair genx.jpeg" alt="Workshop" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>Study abroad fair gennext</h3>
+                        <p class="event-date">April 15, 2025</p>
+                        <p class="event-location">D.Y PATIL INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card-large" onclick="openEventDetail(4)">
+                    <img src="./wa;l through poster.jpeg" alt="Charity" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>INTERNATIONAL WALK THROUGH FEST</h3>
+                        <p class="event-date">February 28, 2025</p>
+                        <p class="event-location">D.Y PATIL INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card-large" onclick="openEventDetail(5)">
+                    <img src="./study abroad fair imperial.jpeg" alt="Speaker" class="event-card-image">
+                    <div class="event-card-overlay">
+                        <h3>Study abroad fair - Imperial</h3>
+                        <p class="event-date">Monthly (varies)</p>
+                        <p class="event-location">D.Y PATIL INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
             </div>
         </div>
     </section>
@@ -188,48 +192,69 @@
     </footer>
 
     <script>
+        // Featured Event Data
+        const featuredEvent = {
+            title: "LUMINAH MUN XXV",
+            icon: "🎭",
+            date: "December 18-19, 2025",
+            time: "10:00 AM - 06:00 PM",
+            location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+            attendees: "300+",
+            description: "Join us for our most prestigious event of the year! The Annual Gala 2025 features live entertainment, fine dining, and exclusive networking opportunities. This is a world-class event bringing together leaders, innovators, and changemakers. Dress code: Black Tie.",
+            highlights: [
+                "Live Jazz Performance",
+                "Gourmet Dinner Service",
+                "Award Ceremony",
+                "Dancing & Entertainment",
+                "Exclusive Networking",
+                "VIP Reception",
+                "Photo Session"
+            ]
+        };
+
         // Event Data
         const events = [
+{
+    title: "COSMOFEST 2025",
+    icon: "💻",
+    date: "24 MARCH, 2025",
+    time: "4:00 PM - 6:00 PM",
+    location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+    attendees: "100+",
+    description: "CosmoFest- The Grand Launch was the club's maiden event, teaching students about multiculturalism and international connections. The event had fun games, quizzes, and adventures to learn about the club's goals and agenda. The event included a variety of interesting and interactive activities that highlighted the club's goal and vision. It began with a lively parody skit followed by an interactive passport, photobooth, and globe map pinning activity. It was followed by an international quiz on geography and world leaders. The winners of the quiz received prizes and was followed by mini TED Talks and \"Just-a-Minute\" Debates where our attendees enthusiastically spoke about the topics we chose.",
+    highlights: [
+        "Keynote Speeches",
+        "Panel Discussions",
+        "Hands-on Workshops",
+        "Networking Breaks",
+        "Technology Showcases"
+    ]
+},
             {
-                title: "Tech Innovation Summit",
-                icon: "💻",
-                date: "October 20, 2025",
-                time: "9:00 AM - 5:00 PM",
-                location: "Convention Center",
-                attendees: "500+",
-                description: "A full-day summit featuring keynote speeches from industry leaders, panel discussions on emerging technologies, and hands-on workshops. Attendees gain insights into the future of technology and digital transformation.",
-                highlights: [
-                    "Keynote Speeches",
-                    "Panel Discussions",
-                    "Hands-on Workshops",
-                    "Networking Breaks",
-                    "Technology Showcases"
-                ]
-            },
-            {
-                title: "Summer Team Building Day",
+                title: "MOCK MUN",
                 icon: "🏃",
-                date: "August 10, 2025",
-                time: "10:00 AM - 6:00 PM",
-                location: "Central Park",
-                attendees: "250+",
-                description: "An exciting outdoor event featuring team sports, games, and activities designed to strengthen bonds among members. The event concludes with a BBQ dinner and live music performances under the stars.",
+                date: "APRIL 11, 2025",
+                time: "4:00 AM - 7:00 PM",
+                location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+                attendees: "50+",
+description: "The session started with explaining the Rules of Procedure of a Model United Nations conference, followed by announcing the agenda and committee while passing out placards with country names that the students would act as delegates of those countries for individually. 15 minutes were given to the students to research about their country and agenda to help with the debate. It was moderated by the convenor of Concordia, who also explained the rules at the beginning. The next hour, students enthusiastically debated about the agenda given, with Best Delegate, High Commendation, Special Mention and Verbal Mention winners announced at the end.",
                 highlights: [
-                    "Team Sports Competitions",
-                    "Outdoor Games",
-                    "BBQ Dinner",
-                    "Live Music",
-                    "Photo Session"
+                    "Rules of Procedure",
+                    "Country Placards",
+                    "Research Time",
+                    "Moderated Debate",
+                    "Awards Ceremony"
+                    
                 ]
             },
             {
-                title: "Awards & Recognition Ceremony",
+                title: "INTERNATIONAL CULTURAL ART",
                 icon: "🏆",
                 date: "June 22, 2025",
-                time: "6:00 PM - 9:00 PM",
-                location: "Auditorium Hall",
-                attendees: "400+",
-                description: "Celebrating the achievements of our members with various awards categories including Excellence in Leadership, Community Service, and Innovation. The ceremony highlights remarkable contributions of our members to society.",
+                time: "4:00 PM - 6:00 PM",
+                location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+                attendees: "50++",
+                description: "This session focused primarily on showcasing various international hand drawn art styles from India, Africa, Europe, etc. We demonstrated various examples of these art styles and participants were given 45 minutes to take inspiration from the displayed examples, apply their own creativity and present their masterpiece and compete for the 1st prize. It ultimately united students to explore and co-create fusion artworks that combine elements from various international cultures.",
                 highlights: [
                     "Excellence Awards",
                     "Leadership Recognition",
@@ -239,12 +264,12 @@
                 ]
             },
             {
-                title: "Professional Development Workshop",
+                title: "STUDY ABROAD FAIR GENNEXT",
                 icon: "📚",
                 date: "April 15, 2025",
                 time: "9:00 AM - 4:00 PM",
-                location: "Training Center",
-                attendees: "150+",
+                location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+                attendees: "1500+",
                 description: "Interactive workshops covering topics like Leadership Skills, Public Speaking, and Business Strategy. Renowned experts lead sessions providing practical insights and actionable strategies for professional growth.",
                 highlights: [
                     "Leadership Training",
@@ -254,30 +279,27 @@
                     "Certification Program"
                 ]
             },
-            {
-                title: "Community Charity Drive",
-                icon: "❤️",
-                date: "February 28, 2025",
-                time: "8:00 AM - 2:00 PM",
-                location: "Multiple Locations",
-                attendees: "350+",
-                description: "Our members come together for a city-wide charity initiative, collecting supplies and funds for local shelters and food banks. This event embodies our commitment to giving back to the community and making a positive impact.",
-                highlights: [
-                    "Supply Collection",
-                    "Fundraising Activities",
-                    "Volunteer Opportunities",
-                    "Community Partnership",
-                    "Social Impact"
+{
+    title: "INTERNATIONAL WALK THROUGH FEST",
+    icon: "",
+    date: "February 28, 2025",
+    time: "8:00 AM - 2:00 PM",
+    location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
+    attendees: "600+",
+    description: "The International Walk Through Fest was an immersive event by the International Club that took students on a journey through the student life and culture of 5 countries. Through creatively designed zones featuring authentic decor, student routines, local cuisine, and cultural elements, the event offered a firsthand glimpse into global student experiences. It aimed to foster cross-cultural awareness and spark curiosity about studying abroad.",
+    highlights: [
+        "Country Zones",
+        "Cultural Performances",    
                 ]
             },
             {
-                title: "Speaker Series: Industry Leaders",
+                title: "Study abroad fair - Imperial",
                 icon: "🎤",
                 date: "Monthly (varies)",
                 time: "5:30 PM - 7:00 PM",
-                location: "Conference Room A",
+                location: "D.Y PATIL INTERNATIONAL UNIVERSITY",
                 attendees: "100-200",
-                description: "Monthly sessions featuring prominent speakers from various industries sharing insights, experiences, and innovative ideas. Great opportunity for networking and learning from the best in the field.",
+                description: " The Speaker Series: Industry Leaders is a monthly event that brings top professionals from various industries to share their insights and experiences with our members. Each session features a keynote speech followed by a Q&A session, allowing attendees to engage directly with the speakers. This series provides valuable networking opportunities and practical advice for students aspiring to succeed in their chosen fields.",
                 highlights: [
                     "Guest Speakers",
                     "Q&A Sessions",
@@ -285,27 +307,17 @@
                     "Resource Materials",
                     "Video Recording"
                 ]
-            },
-            {
-                title: "Global Summit 2025",
-                icon: "🌍",
-                date: "September 10-12, 2025",
-                time: "9:00 AM - 6:00 PM",
-                location: "International Convention Center",
-                attendees: "1000+",
-                description: "A three-day international summit bringing together leaders, innovators, and changemakers from around the world. Network globally and explore solutions to international challenges.",
-                highlights: [
-                    "International Speakers",
-                    "Cross-Cultural Workshops",
-                    "Global Networking",
-                    "Exhibition Hall",
-                    "Gala Dinner"
-                ]
             }
         ];
 
         function openEventDetail(index) {
-            const event = events[index];
+            let event;
+            if (index === -1) {
+                event = featuredEvent;
+            } else {
+                event = events[index];
+            }
+            
             document.getElementById('modalIcon').textContent = event.icon;
             document.getElementById('modalTitle').textContent = event.title;
             document.getElementById('modalDate').textContent = event.date;
