@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Events - Concordia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>CONCORDIA</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Interactive Events</h1>
+        <p>Click on any event circle to see detailed information</p>
+    </section>
+
+    <!-- Interactive Events Section -->
+    <section class="interactive-events-section">
+        <div class="container">
+            <h2>Our Events</h2>
+            <p class="section-subtitle">Explore our exciting events by clicking on the circles below</p>
+
+            <div class="events-circles-grid">
+                <!-- Event 1 -->
+                <div class="event-circle" onclick="openEventDetail(0)">
+                    <div class="circle-icon">🎭</div>
+                    <div class="circle-text">Annual Gala 2025</div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-circle" onclick="openEventDetail(1)">
+                    <div class="circle-icon">💻</div>
+                    <div class="circle-text">Tech Summit</div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-circle" onclick="openEventDetail(2)">
+                    <div class="circle-icon">🏃</div>
+                    <div class="circle-text">Team Building</div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-circle" onclick="openEventDetail(3)">
+                    <div class="circle-icon">🏆</div>
+                    <div class="circle-text">Awards Ceremony</div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-circle" onclick="openEventDetail(4)">
+                    <div class="circle-icon">📚</div>
+                    <div class="circle-text">Workshop Series</div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-circle" onclick="openEventDetail(5)">
+                    <div class="circle-icon">❤️</div>
+                    <div class="circle-text">Charity Drive</div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="event-circle" onclick="openEventDetail(6)">
+                    <div class="circle-icon">🎤</div>
+                    <div class="circle-text">Speaker Series</div>
+                </div>
+
+                <!-- Event 8 -->
+                <div class="event-circle" onclick="openEventDetail(7)">
+                    <div class="circle-icon">🌍</div>
+                    <div class="circle-text">Global Summit</div>
+                </div>
+
+                <!-- Event 9 -->
+                <div class="event-circle" onclick="openEventDetail(8)">
+                    <div class="circle-icon">🎨</div>
+                    <div class="circle-text">Creative Workshop</div>
+                </div>
+
+                <!-- Event 10 -->
+                <div class="event-circle" onclick="openEventDetail(9)">
+                    <div class="circle-icon">🍽️</div>
+                    <div class="circle-text">Networking Lunch</div>
+                </div>
+
+                <!-- Event 11 -->
+                <div class="event-circle" onclick="openEventDetail(10)">
+                    <div class="circle-icon">🎓</div>
+                    <div class="circle-text">Training Program</div>
+                </div>
+
+                <!-- Event 12 -->
+                <div class="event-circle" onclick="openEventDetail(11)">
+                    <div class="circle-icon">🚀</div>
+                    <div class="circle-text">Innovation Lab</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Detail Modal -->
+    <div id="eventModal" class="event-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEventDetail()">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"></div>
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="detail-item">
+                    <span class="label">📅 Date:</span>
+                    <span id="modalDate"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">🕐 Time:</span>
+                    <span id="modalTime"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">📍 Location:</span>
+                    <span id="modalLocation"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">👥 Attendees:</span>
+                    <span id="modalAttendees"></span>
+                </div>
+                <div class="detail-section">
+                    <h3>Description</h3>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="detail-section">
+                    <h3>Highlights</h3>
+                    <ul id="modalHighlights"></ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeEventDetail()">Close</button>
+                <button class="btn" onclick="registerEvent()">Register Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Concordia. All rights reserved.</p>
+            <p>Follow us on social media for updates and announcements</p>
+        </div>
+    </footer>
+
+    <script>
+        // Event Data
+        const events = [
+            {
+                title: "Annual Gala 2025",
+                icon: "🎭",
+                date: "December 15, 2025",
+                time: "7:00 PM - 11:00 PM",
+                location: "Grand Ballroom, City Center",
+                attendees: "300+",
+                description: "Join us for our most prestigious event of the year featuring live entertainment, fine dining, and networking opportunities. This spectacular evening celebrates achievements and community spirit with elegant ambiance and memorable moments.",
+                highlights: [
+                    "Live Jazz Performance",
+                    "Gourmet Dinner Service",
+                    "Award Ceremony",
+                    "Dancing & Entertainment",
+                    "Networking Opportunities"
+                ]
+            },
+            {
+                title: "Tech Innovation Summit",
+                icon: "💻",
+                date: "October 20, 2025",
+                time: "9:00 AM - 5:00 PM",
+                location: "Convention Center",
+                attendees: "500+",
+                description: "A full-day summit featuring keynote speeches from industry leaders, panel discussions on emerging technologies, and hands-on workshops. Attendees gain insights into the future of technology and digital transformation.",
+                highlights: [
+                    "Keynote Speeches",
+                    "Panel Discussions",
+                    "Hands-on Workshops",
+                    "Networking Breaks",
+                    "Technology Showcases"
+                ]
+            },
+            {
+                title: "Summer Team Building Day",
+                icon: "🏃",
+                date: "August 10, 2025",
+                time: "10:00 AM - 6:00 PM",
+                location: "Central Park",
+                attendees: "250+",
+                description: "An exciting outdoor event featuring team sports, games, and activities designed to strengthen bonds among members. The event concludes with a BBQ dinner and live music performances under the stars.",
+                highlights: [
+                    "Team Sports Competitions",
+                    "Outdoor Games",
+                    "BBQ Dinner",
+                    "Live Music",
+                    "Photo Session"
+                ]
+            },
+            {
+                title: "Awards & Recognition Ceremony",
+                icon: "🏆",
+                date: "June 22, 2025",
+                time: "6:00 PM - 9:00 PM",
+                location: "Auditorium Hall",
+                attendees: "400+",
+                description: "Celebrating the achievements of our members with various awards categories including Excellence in Leadership, Community Service, and Innovation. The ceremony highlights remarkable contributions of our members to society.",
+                highlights: [
+                    "Excellence Awards",
+                    "Leadership Recognition",
+                    "Community Service Awards",
+                    "Innovation Recognition",
+                    "Celebration Reception"
+                ]
+            },
+            {
+                title: "Professional Development Workshop",
+                icon: "📚",
+                date: "April 15, 2025",
+                time: "9:00 AM - 4:00 PM",
+                location: "Training Center",
+                attendees: "150+",
+                description: "Interactive workshops covering topics like Leadership Skills, Public Speaking, and Business Strategy. Renowned experts lead sessions providing practical insights and actionable strategies for professional growth.",
+                highlights: [
+                    "Leadership Training",
+                    "Public Speaking Coaching",
+                    "Business Strategy",
+                    "Networking Sessions",
+                    "Certification Program"
+                ]
+            },
+            {
+                title: "Community Charity Drive",
+                icon: "❤️",
+                date: "February 28, 2025",
+                time: "8:00 AM - 2:00 PM",
+                location: "Multiple Locations",
+                attendees: "350+",
+                description: "Our members come together for a city-wide charity initiative, collecting supplies and funds for local shelters and food banks. This event embodies our commitment to giving back to the community and making a positive impact.",
+                highlights: [
+                    "Supply Collection",
+                    "Fundraising Activities",
+                    "Volunteer Opportunities",
+                    "Community Partnership",
+                    "Social Impact"
+                ]
+            },
+            {
+                title: "Speaker Series: Industry Leaders",
+                icon: "🎤",
+                date: "Monthly (varies)",
+                time: "5:30 PM - 7:00 PM",
+                location: "Conference Room A",
+                attendees: "100-200",
+                description: "Monthly sessions featuring prominent speakers from various industries sharing insights, experiences, and innovative ideas. Great opportunity for networking and learning from the best in the field.",
+                highlights: [
+                    "Guest Speakers",
+                    "Q&A Sessions",
+                    "Networking Reception",
+                    "Resource Materials",
+                    "Video Recording"
+                ]
+            },
+            {
+                title: "Global Summit 2025",
+                icon: "🌍",
+                date: "September 10-12, 2025",
+                time: "9:00 AM - 6:00 PM",
+                location: "International Convention Center",
+                attendees: "1000+",
+                description: "A three-day international summit bringing together leaders, innovators, and changemakers from around the world. Network globally and explore solutions to international challenges.",
+                highlights: [
+                    "International Speakers",
+                    "Cross-Cultural Workshops",
+                    "Global Networking",
+                    "Exhibition Hall",
+                    "Gala Dinner"
+                ]
+            },
+            {
+                title: "Creative Workshop Series",
+                icon: "🎨",
+                date: "May 5-6, 2025",
+                time: "10:00 AM - 4:00 PM",
+                location: "Arts & Culture Center",
+                attendees: "80+",
+                description: "Unleash your creativity with our hands-on workshops covering art, design, and creative thinking. Learn from professional artists and designers while developing new skills.",
+                highlights: [
+                    "Art Demonstrations",
+                    "Design Workshops",
+                    "Creative Thinking Exercises",
+                    "Artist Networking",
+                    "Gallery Display"
+                ]
+            },
+            {
+                title: "Networking Lunch Series",
+                icon: "🍽️",
+                date: "Bi-weekly",
+                time: "12:00 PM - 1:30 PM",
+                location: "Premium Restaurant Venues",
+                attendees: "50-100",
+                description: "Casual networking lunches in premium restaurant settings. Perfect for building meaningful connections while enjoying quality food and conversation in a relaxed atmosphere.",
+                highlights: [
+                    "Casual Networking",
+                    "Gourmet Lunch",
+                    "Intimate Setting",
+                    "One-on-One Meetings",
+                    "Business Card Exchange"
+                ]
+            },
+            {
+                title: "Professional Training Program",
+                icon: "🎓",
+                date: "January - March 2025",
+                time: "Various (evenings & weekends)",
+                location: "Training Campus",
+                attendees: "200+",
+                description: "Comprehensive training program designed to enhance professional skills and certification. Covers essential topics for career advancement with recognized certifications upon completion.",
+                highlights: [
+                    "Certified Instructors",
+                    "Interactive Learning",
+                    "Skill Assessment",
+                    "Certificate Program",
+                    "Job Placement Assistance"
+                ]
+            },
+            {
+                title: "Innovation Lab",
+                icon: "🚀",
+                date: "Ongoing (Monthly Sessions)",
+                time: "6:00 PM - 8:00 PM",
+                location: "Innovation Hub",
+                attendees: "100+",
+                description: "A collaborative space for members to develop and pitch innovative ideas. Mentorship from successful entrepreneurs and potential investors in attendance.",
+                highlights: [
+                    "Idea Pitch Sessions",
+                    "Mentor Guidance",
+                    "Investor Networking",
+                    "Resource Access",
+                    "Prototype Development"
+                ]
+            }
+        ];
+
+        function openEventDetail(index) {
+            const event = events[index];
+            document.getElementById('modalIcon').textContent = event.icon;
+            document.getElementById('modalTitle').textContent = event.title;
+            document.getElementById('modalDate').textContent = event.date;
+            document.getElementById('modalTime').textContent = event.time;
+            document.getElementById('modalLocation').textContent = event.location;
+            document.getElementById('modalAttendees').textContent = event.attendees;
+            document.getElementById('modalDescription').textContent = event.description;
+            
+            const highlightsList = document.getElementById('modalHighlights');
+            highlightsList.innerHTML = '';
+            event.highlights.forEach(highlight => {
+                const li = document.createElement('li');
+                li.textContent = highlight;
+                highlightsList.appendChild(li);
+            });
+
+            document.getElementById('eventModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEventDetail() {
+            document.getElementById('eventModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function registerEvent() {
+            alert('Thank you for your interest! Registration form will open soon.');
+            closeEventDetail();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('eventModal');
+            if (event.target == modal) {
+                closeEventDetail();
+            }
+        }
+    </script>
+</body>
+</html>

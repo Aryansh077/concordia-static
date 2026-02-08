@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONCORDIA - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Logo -->
+    <div class="fixed-logo">
+        <img src="./BACKGROUND IMAGE CONCORDIA.png" alt="Concordia Logo">
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>CONCORDIA</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Carousel -->
+    <section class="hero">
+        <!-- Background Carousel -->
+        <div class="hero-background-carousel">
+            <div class="hero-bg-slide fade-bg" style="display: block;">
+                <img src="./HOME PAGE 1.JPG" alt="Background 1">
+            </div>
+            <div class="hero-bg-slide fade-bg">
+                <img src="./HOMW PAGE 2.jpg" alt="Background 2">
+            </div>
+            <div class="hero-bg-slide fade-bg">
+                <img src="./HOME PAGE 3.jpg" alt="Background 3">
+            </div>
+            <div class="hero-bg-slide fade-bg">
+                <img src="./HOME PAGE 4.jpg" alt="Background 4">
+            </div>
+            <div class="hero-bg-slide fade-bg">
+                <img src="./HOME PAGE 5.JPG" alt="Background 5">
+            </div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="hero-content">
+            <h1>Welcome to Concordia</h1>
+            <p>THE INTERNATIONAL SOCIETY</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-card">
+                <div class="icon">📅</div>
+                <h3>Exciting Events</h3>
+                <p>Join us for amazing events and activities throughout the year</p>
+            </div>
+            <div class="overview-card">
+                <div class="icon">🤝</div>
+                <h3>Great Community</h3>
+                <p>Network and connect with like-minded individuals</p>
+            </div>
+            <div class="overview-card">
+                <div class="icon">⭐</div>
+                <h3>Premium Sponsors</h3>
+                <p>Supported by industry-leading organizations</p>
+        
+        </div>
+    </section>
+
+    <script>
+        // Hero Background Carousel
+        let heroBgIndex = 1;
+        let heroBgTimer;
+
+        function showHeroBgSlide(n) {
+            let slides = document.getElementsByClassName("hero-bg-slide");
+            if (n > slides.length) heroBgIndex = 1;
+            if (n < 1) heroBgIndex = slides.length;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[heroBgIndex - 1].style.display = "block";
+        }
+
+        function autoHeroBg() {
+            heroBgTimer = setTimeout(() => {
+                heroBgIndex++;
+                showHeroBgSlide(heroBgIndex);
+                autoHeroBg();
+            }, 2000); // Change background every 2 seconds
+        }
+
+        // Initialize hero background carousel on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showHeroBgSlide(heroBgIndex);
+            autoHeroBg();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Concordia. All rights reserved.</p>
+            <p>Follow us on social media for updates and announcements</p>
+        </div>
+    </footer>
+</body>
+</html>
