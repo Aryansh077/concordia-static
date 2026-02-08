@@ -70,6 +70,20 @@ html {
     gap: 1rem;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
 .navbar-logo {
     width: 45px;
     height: 45px;
@@ -300,6 +314,12 @@ html {
     background-color: var(--light-bg);
 }
 
+.overview .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
 .overview-card {
     background: white;
     padding: 2rem;
@@ -307,7 +327,6 @@ html {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    margin-bottom: 2rem;
 }
 
 .overview-card:hover {
@@ -329,6 +348,7 @@ html {
 .overview-card p {
     color: var(--text-light);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* ==========================================
@@ -2439,25 +2459,25 @@ html {
     align-items: center;
     justify-content: center;
     padding: 0.8rem 1rem;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #1DA1F2, #1a91da);
     color: white;
     border-radius: 8px;
     text-decoration: none;
     transition: var(--transition);
-    box-shadow: 0 4px 12px rgba(45, 155, 92, 0.2);
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.3);
 }
 
 .icon-text {
     font-size: 0.95rem;
     font-weight: bold;
-    color: black;
+    color: white;
     letter-spacing: 1px;
 }
 
 .social-icon:hover {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, #1a91da, #1682c4);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(45, 155, 92, 0.3);
+    box-shadow: 0 8px 20px rgba(29, 161, 242, 0.5);
 }
 
 @media (max-width: 768px) {
