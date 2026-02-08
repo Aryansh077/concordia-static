@@ -2577,6 +2577,24 @@ html {
    ========================================== */
 
 @media (max-width: 768px) {
+    .navbar {
+        position: static;
+        padding: 0.75rem 0;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo {
+        gap: 0.5rem;
+    }
+
+    .navbar-logo {
+        width: 35px;
+        height: 35px;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }
@@ -2626,9 +2644,40 @@ html {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        position: static;
+        padding: 0.5rem 0;
+    }
+
+    .nav-container {
+        padding: 0 5px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        gap: 0.3rem;
+    }
+
+    .navbar-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
     .nav-menu {
         gap: 0.25rem;
         font-size: 0.8rem;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
     }
 
     .hero {
